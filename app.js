@@ -62,7 +62,7 @@ const updateDisplay = (input) => {
     lastKeyStroke = input; 
   } 
   //begins a new calculation if number typed directly after equals
-  else if (lastKeyStroke === 'equals' && typeof input === 'number') {
+  else if (lastKeyStroke === 'equals' && (typeof input === 'number' || input === '.')) {
     clearDisplay();
     display.innerHTML = input;
     lastKeyStroke = input;
